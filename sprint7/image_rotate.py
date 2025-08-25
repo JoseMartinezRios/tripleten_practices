@@ -7,7 +7,9 @@ parser = argparse.ArgumentParser()
 # agregar argumentos con nombres correspondientes
 parser.add_argument('input_file')	# primer argumento: archivo de entrada
 parser.add_argument('output_file')	# segundo argumento: archivo de salida
-parser.add_argument('angle',type=int)	# tercer argumento: ángulo
+# usar opciones de valores predeterminados
+parser.add_argument('--angle','-a',type=int, default=90)	# tercer argumento: ángulo
+
 
 # analizar argumentos
 args = parser.parse_args()
